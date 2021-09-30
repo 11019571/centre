@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('devil postie.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+  <h2>NRDC Sort Sheet</h2>
+
+<input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search for a street.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Street</th>
+    <th style="width:20%;">Suburb</th>
+    <th style="width:20%;">Round</th>
+    
+ <tr><td>     EPPING RD</td><td>EPPING 2121</td><td>RND_7700</td></tr>
+ <tr><td>    ABAROO ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    ABUKLEA RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    ABUKLEA RD</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    ACACIA AVE</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    ACACIA ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    ADA PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    ADA ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    ADAM ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    ADDER ST</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    ADDERTON RD</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    ADDINGTON AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    ADELAIDE ST</td><td>MEADOWBANK 2114</td><td>RND_7410</td></tr>
+ <tr><td>    ADELAIDE ST</td><td>MELROSE PARK 2114</td><td>RND_7410</td></tr>
+ <tr><td>    ADELAIDE ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    ADELPHI RD</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    ADRIAN CT</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    AEOLUS AVE</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    AGINCOURT RD</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    AINSLIE PDE</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    AITCHANDAR RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    ALAMEIN AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    ALAN BOND PL</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    ALBERT RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    ALBION AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ALBUERA RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    ALEXANDER PDE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    ALEXANDRA PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    ALEXANDRIA AVE</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    ALISON ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    ALKIRA RD</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    ALKOOMIE PL</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    ALLAN AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    ALLARS ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    ALLAWAH RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ALLENGROVE CRES</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    ALLERTON RD</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    ALMA RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    AMELIA ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    ANATOL PL</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    ANDERSON AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    ANDREW AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    ANDREW ST</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    ANDREW ST</td><td>WEST RYDE 2114</td><td>RND_7420</td></tr>
+ <tr><td>    ANEMBO PL</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    ANGAS ST</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    ANGUS AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    ANNABELLE PL</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    ANNE MARIE PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    ANTHONY RD</td><td>DENISTONE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    ANTHONY ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    ANTHONY ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    ANZAC AVE</td><td>DENISTONE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    APOLLO AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    APOLLO PL</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    ARCADIAN CCT</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    ARDEN RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ARGYLE AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    ARGYLL PL</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    ARILLA RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ARKENA AVE</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    ARNOLD ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    ARRAS PDE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    ARTHUR ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    ARUNDEL ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    ASHLEY GR</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    ASHMORE AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ASTER ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    ATHOL PL</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    AUDINE AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    AULD AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    AUSTRAL AVE</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    AVON CL</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    AVON LANE</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    AVON RD</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    AVONDALE PL</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    AVONDALE WAY</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    AVONLEA DR</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    AZILE CT</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    BAILEY CRES</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    BAIRD AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    BAKER ST</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    BALACLAVA RD</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    BALACLAVA RD</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    BALACLAVA RD</td><td>MACQUARIE PARK 2113</td><td>RND_7700</td></tr>
+ <tr><td>    BALAKA DR</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    BALDWIN ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    BALL AVE</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>    BALMORAL PL</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    BAMBARA CRES</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    BAMBI ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    BANDALONG AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    BANFIELD RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    BANGALOW AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    BANK ST</td><td>MEADOWBANK 2114</td><td>RND_7450</td></tr>
+ <tr><td>    BANK ST</td><td>WEST RYDE 2114</td><td>RND_7450</td></tr>
+ <tr><td>    BANKSHILL CRES</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    BANKSIA ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    BARCLAY CL</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    BARDIA RD</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    BAREENA PL</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>    BARELLAN AVE</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    BARINGA ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    BAROMBAH RD</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    BARONS AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    BARR ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    BARRINGTON PL</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    BARTIL CL</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    BASS ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    BATTEN AVE</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    BAVIN AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    BAY DR</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    BEACON AVE</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    BEATRICE ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    BEATTIE AVE</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    BEAUMONT AVE</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BEAZLEY ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    BECK ST</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    BEDFORD RD</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    BEECHWORTH RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    BEECROFT RD</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    BEECROFT RD</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    BELINDA CRES</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    BELL AVE</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    BELL ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    BELLAMY AVE</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    BELLEVUE AVE</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BELLEVUE AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BELLEVUE DR</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    BELTANA ST</td><td>DENISTONE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    BENCOOLEN AVE</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BENCOOLEN AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BENGHAZI RD</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    BENNELONG WAY</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    BENNETT ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    BENSON ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    BERGIN ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BERRIPA CL</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    BERRYMAN ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    BERTRAM ST</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    BERTRAND CL</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    BESWICK AVE</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    BETOLA ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    BETTINGTON RD</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    BETTOWYND RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    BETTY HENDRY PDE</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    BEVAN PL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    BEVERLEY CRES</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    BIARA CL</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    BIDGEE RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    BIGLAND AVE</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BIGLAND AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BILLYARD PL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    BIMBADEEN ST</td><td>EPPING 2121</td><td>RND_7640</td></tr>
+ <tr><td>    BINALONG ST</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    BINGARA RD</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    BINGARA ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    BIRCH ST</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    BIRCHGROVE CRES</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    BIRD ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    BIRDWOOD ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    BIRUBI AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    BLACKWOOD CL</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    BLAMEY ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    BLAXLAND RD</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    BLAXLAND RD</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    BLAXLAND RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    BLENHEIM RD</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    BLOOMSBURY AVE</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    BLUE GUM DR</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    BLUETT AVE</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    BLUNDELL ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    BOBBIN HEAD RD</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>    BOLTON PL</td><td>PYMBLE 2073</td><td>RND_3530</td></tr>
+ <tr><td>    BOLWARRA AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    BOND ST</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    BOOLARONG RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    BOONGIL ST</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    BOOTH ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    BOREE ST</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    BORONGA AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    BORONIA AVE</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    BORONIA AVE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    BORONIA AVE</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    BORONIA PL</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    BOULTON ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    BOUNDARY RD</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    BOUNDARY RD</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    BOURKE ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    BOWDEN ST</td><td>MEADOWBANK 2114</td><td>RND_7020</td></tr>
+ <tr><td>    BOYCE ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    BRABYN ST</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    BRADFORD ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    BRADLEY DR</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    BRAIDWOOD AVE</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    BRAND ST</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    BRENDA WAY</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    BRENDON PL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    BRENDON ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    BRIAN ST</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    BRIDGE RD</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    BRIDGE RD</td><td>NORTH RYDE 2113</td><td>RND_7680</td></tr>
+ <tr><td>    BRIDGE RD</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    BRIDGE ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    BRIDGE ST</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    BRIGADOON CT</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    BRIGG RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    BRIGHT ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    BRISTOL AVE</td><td>PYMBLE 2073</td><td>RND_3530</td></tr>
+ <tr><td>    BROADWAY CCT</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    BROMLEY AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    BRONHILL AVE</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    BROOKLYN CRES</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    BROULEE PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    BROWNS RD</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    BRUCE ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    BRUCEDALE AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    BRUNTON PL</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>    BRUSH RD</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    BUCKLAND AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    BUENA VISTA AVE</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BUFFALO RD</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    BULKIRA RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    BULLAWAI PL</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    BUNA CT</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    BUNGALOW AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    BURGOYNE LANE</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>    BURGOYNE ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    BURKE ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    BURMAH RD</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    BURNS RD N</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    BURNS RD S</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    BURNS ST</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    BUSACO RD</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>    BUSHLAND CRES</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    BUSHLANDS AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    BUYUMA ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    BYFIELD ST</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    BYGRAVE ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    BYRON AVE</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    CADOW ST</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    CALLAGHAN ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    CALLISTEMON CL</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    CALOOL RD</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    CAM ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    CAMBRIDGE ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    CAMELOT CT</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    CAMERON CRES</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    CAMERON RD</td><td>PYMBLE 2073</td><td>RND_3530</td></tr>
+ <tr><td>    CAMIRA ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    CAMPBELL ST</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    CAMPTON CT</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    CANBERRA ST</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    CANISIUS CL</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    CAPTAIN STROM PL</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    CARAWATHA ST</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    CARDINAL AVE</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    CARINYA RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    CARLINGFORD RD</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>    CARLISLE CL</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    CARLISLE CRES</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    CARMEN DR</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    CARMEN ST</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    CAROLYN AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    CARRAMAR AVE</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    CARRINGTON CRES</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    CARSON ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    CARTER ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    CASBEN CL</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    CASSANDRA PL</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    CASSIA GR</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    CASSIA PL</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    CASTLE HOWARD RD</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    CASTLE HOWARD RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    CAVAN DR</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    CAVE AVE</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    CAWARRA PL</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    CECIL ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    CEDARWOOD PL</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    CENTRAL AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    CHADWICK ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    CHAMBERS CT</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    CHARLES ST</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    CHATFIELD ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    CHATHAM RD</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    CHATHAM RD</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    CHAUVEL ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    CHEERS ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    CHELMSFORD AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    CHERRY AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    CHERRY CT</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    CHESTER ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    CHESTERFIELD RD</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    CHILWORTH CL</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    CHISHOLM ST</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    CHORLEY AVE</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    CHRISTEL AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    CHRISTIE RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    CHRISTINE AVE</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>    CHURCH LANE</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    CHURCH ST</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    CILENTO CRES</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    CITRUS GR</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    CLANALPINE ST</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    CLARENCE ST</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    CLARKE ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    CLAYTON ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    CLERMONT AVE</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    CLIFF RD</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>    CLIFFORD ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    CLIFTON ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    CLIVE RD</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    CLOVER CL</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    CLYDESDALE PL</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>    COBAC AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    COBHAM AVE</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    COBRAN RD</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    COCOS AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    COLEBEE ST</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    COLEMAN AVE</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    COLERIDGE ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    COLIN PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    COLLINGRIDGE DR</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    COLLINS ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    COLSTON ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    COLVIN CRES</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    COMBE PL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    COMMISSIONERS RD</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    CONGHAM RD</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    CONRAD ST</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    CONSTANCE CL</td><td>EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    CONSTITUTION CT</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    COOINDA CL</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    COOK ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    COOKE WAY</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    COONEY ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    COOPER ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    CORAL ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    CORAL TREE DR</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    CORNWALL ST</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    CORONATION AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    CORREY PL</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    CORUNNA RD</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    COSIMO PL</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    COTTEE DR</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    COTTON ST</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    COTTONWOOD CRES</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    COURALLIE AVE</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    COVENTRY CRES</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    COVENTRY PL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    COVERDALE ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    COWELL ST</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    COXS RD</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    CRAIGLANDS AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    CRAIGLEA GDNS</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    CRANDON RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    CRESCENT AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    CRESSFIELD AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    CRESSY RD</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    CROSS ST</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    CROSS ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    CROTOYE PL</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    CROWLEY CRES</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    CROWN RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    CROWN ST</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    CUDAL PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    CULGOA AVE</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    CULTOWA RD</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    CURTIS CT</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    CURTIS ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    CURZON ST</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>    CUTLER PDE</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    CYNTHIA ST</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    DAFFODIL ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    DAKARA CL</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    DALLWOOD AVE</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    DALMAR PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    DALRYMPLE CRES</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    DALTON AVE</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    DALTON AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    DALWOOD PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    DAMON AVE</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    DAN ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    DANBURY CL</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    DANDARBONG AVE</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    DAPHNE ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    DARCY ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    DARNLEY ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    DARVALL RD</td><td>DENISTONE WEST 2114</td><td>RND_7440</td></tr>
+ <tr><td>    DARVALL RD</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    DARWIN ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    DARWIN ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    DAVID AVE</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    DAVIS AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    DAWES CRES</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    DAWSON ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    DAY RD</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    DAYMAN PL</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>    DEAKIN ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    DEBORAH PL</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    DELANGE RD</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    DELAWARE ST</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>    DELHI RD</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>    DELHI RD</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>    DEMPSEY ST</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    DENGATE ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    DENISTONE RD</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    DENISTONE RD</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    DENMAN ST</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>    DENT ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    DERBY ST</td><td>EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    DESMOND ST</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    DEVLIN RD</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    DEVON ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    DIANA AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    DIANE ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    DICKSON AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    DICKSON LANE</td><td>WEST RYDE 2114</td><td>RND_7420</td></tr>
+ <tr><td>    DOBSON CRES</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    DOIG AVE</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    DOLAN ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    DONALD AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    DONALD ST</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    DONALD ST</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    DONCASTER AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    DONNELLY ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    DONOVAN ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    DOOMBEN AVE</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    DORA ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    DOROTHY ST</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    DORSET ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    DOUGLAS AVE</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    DOUGLAS ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    DOUGLASS AVE</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    DOVER ST</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    DOWNES ST</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    DOWNING ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    DOYLE PL</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    DRAKE AVE</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    DRIVER ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    DRYDEN AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    DUIGNAN CL</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    DUNBAR ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    DUNCAN PL</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    DUNEBA AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    DUNMORE AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    DUNMORE RD</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    DUNOON AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    DUNROSSIL AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    DUNSHEA ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    DUNTROON AVE</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    DURHAM CL</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    DURHAM ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    DWYER ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    DYSON ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    EAGLE ST</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    EAST PDE</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    EASTCOTE RD</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    EASTVIEW AVE</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    EASTWOOD AVE</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    EASTWOOD AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    EBONY AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    EDEN PARK DR</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>    EDEN ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    EDENHOLME ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    EDENLEE ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    EDENSOR ST</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    EDGAR ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    EDINBURGH AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    EDITH ST</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    EDMONDSON ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    EDWARD ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    EDWARD ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    EDWARDS AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    EIGHTH AVE</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    EILEEN ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    ELBON AVE</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    ELDON LANE</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    ELGATTA PL</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    ELGIN ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    ELIZABETH ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    ELK ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    ELLEN ST</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    ELLIOTT AVE</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    ELLISON PL</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    ELSMORE PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    ELSTON AVE</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    EMPIRE CT</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    EMU ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    ENDEAVOUR ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    ENGEL AVE</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    ENID ST</td><td>DENISTONE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    EPPING AVE</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    EPPING AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    EPPING PARK DR</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    EPPLESTON PL</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    ERIC ST</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    ERINA ST</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    EULALIA ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    EULO PDE</td><td>RYDE 2112</td><td>RND_7090</td></tr>
+ <tr><td>    EVANS RD</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    EVANS ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    EVERTON ST</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>    EYLES AVE</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    FAIRWAY AVE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    FARADAY LANE</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    FARNELL AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    FARNELL ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    FARRANT PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    FARRINGTON PDE</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    FAWCETT ST</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>    FAY PL</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    FEDERAL RD</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    FERN ST</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    FERNDALE AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    FERNDALE RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    FERNHILL AVE</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    FERNLEIGH CL</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    FERNTREE PL</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    FERNVALE AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    FERRABETTA AVE</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    FIFTH AVE</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    FIG PL</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    FINCH AVE</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    FINLAY AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    FIONA RD</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    FIR TREE AVE</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    FIRST AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    FIRST AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    FISHER AVE</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    FITZPATRICK ST</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    FITZROY AVE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    FITZROY LANE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    FLEMING ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    FLINDERS RD</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    FLORENCE AVE</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    FLORENCE PL</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    FLOREY AVE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    FOLKARD ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    FONTENOY RD</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    FONTI ST</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    FORD ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    FOREST GR</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    FORESTER DR</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>    FORREST RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    FORSTER ST</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>    FOURTH AVE</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    FOURTH AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    FOX RD</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    FRANCES RD</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    FRANCIS ST</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    FRANKLIN PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    FREDERICK ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    FREDRIKA PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    FREEMAN PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    FREESTONE AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    GALE ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    GALLARD ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    GANMAIN RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    GARDEN SQ</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    GARDENER AVE</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    GARDENERS LANE</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    GARLAND AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    GARRETT RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    GENNER ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    GEORGE ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    GEORGIAN AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    GIBB ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    GIFFNOCK AVE</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    GILDA ST</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    GILLARD WAY</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    GILLIAN PDE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    GLADSTONE AVE</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    GLEN ST</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    GLENAYR AVE</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    GLENAYR AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    GLENDOWER AVE</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    GLENELG PL</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    GLENFERN RD</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    GLENVIEW ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    GLENWOOD ST</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    GLOUCESTER AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    GLOUCESTER RD</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    GOLFERS PDE</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    GOODWIN ST</td><td>DENISTONE 2114</td><td>RND_7430</td></tr>
+ <tr><td>    GOODWIN ST</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>    GORDON CRES</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    GORDON ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    GOSSELL GR</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    GOULDING RD</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    GOWAN CT</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    GOWRIE ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    GRACE AVE</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    GRAF AVE</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>    GRAHAM AVE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    GRAHAM AVE</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    GRAND AVE</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    GRANDVIEW PDE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    GRANT CL</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    GRAYLING RD</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    GRAYSON RD</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    GREENDALE AVE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    GREENE AVE</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    GREENWAY DR</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    GREGORY AVE</td><td>NORTH EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    GREGORY ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    GRIFFITHS AVE</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    GRIGG AVE</td><td>NORTH EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    GRIMES LANE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    GROVE LANE</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    GROVE ST</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    GUNBALANYA AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    GUNYAH ST</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    GWENDALE CRES</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    HAIG AVE</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    HAINES AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    HAITE CL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    HAKEA PL</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    HALIFAX ST</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>    HALL ST</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    HAMER ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    HAMILTON CRES</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>    HAMILTON PDE</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    HAMPSHIRE AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    HANCOTT ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    HANNAH ST</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    HANOVER AVE</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    HAREFIELD CL</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    HARFORD ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    HARLEY CRES</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    HARPER ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    HARRISON AVE</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    HARVEST ST</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    HATTON ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    HAVILAH PL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    HAY ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    HAYWOOD ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    HAZLEWOOD PL</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>    HEARD ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    HEARNSHAW ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    HEATH LANE</td><td>RYDE 2112</td><td>RND_7090</td></tr>
+ <tr><td>    HEATH ST</td><td>RYDE 2112</td><td>RND_7090</td></tr>
+ <tr><td>    HELEN ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    HENDERSON ST</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    HENRY ST</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    HENRY ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    HEPBURN AVE</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>    HEREFORD PL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    HERMINGTON ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    HERMOYNE ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    HERRING RD</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    HESPERUS ST</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    HEYSEN CL</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    HIBBLE ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    HIBISCUS AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    HIGGINBOTHAM RD</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    HIGH ST</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    HIGHLANDS AVE</td><td>GORDON 2072</td><td>RND_3460</td></tr>
+ <tr><td>    HIGHVIEW CL</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    HILAR AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    HILLARY ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    HILLCREST AVE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    HILLS AVE</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    HILLSIDE CRES</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    HINKLER AVE</td><td>RYDE 2112</td><td>RND_7460</td></tr>
+ <tr><td>    HOCKLEY RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    HOLDEN AVE</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    HOLFORD CRES</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    HOLLAND ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    HOLLIS AVE</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    HOLLISTER PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    HOLLY AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    HOLT ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    HOLWAY ST</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    HOMELANDS AVE</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    HONITON AVE</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    HOPE ST</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    HOPE ST</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    HOPETOUN AVE</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    HORDERN AVE</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    HOWARD PL</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    HOWARD ST</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    HUGHES ST</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    HUNTS AVE</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    HUXLEY ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    IAN ST</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    IDA ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    ILLARANGI ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    ILMA ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    IMLAY AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    INALA PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    INKERMAN RD</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    INNOVATION RD</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    INVERALLAN AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    IONA AVE</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    IRENE CRES</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    IRIS ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    IRVINE CRES</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    ISABEL ST</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>    IVANHOE PL</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    IVY ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    JACARANDA PL</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    JACINTA AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    JACKSON CRES</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    JACOBS CL</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    JAMES ST</td><td>MELROSE PARK 2114</td><td>RND_7410</td></tr>
+ <tr><td>    JANELL CRES</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>    JAPONICA RD</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    JARVIS CT</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>    JAYNE ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    JEANETTE ST</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    JENNIE PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    JENNIFER ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    JESMOND CRES</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    JETTY RD</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    JOHN MILLER ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    JOHN ST</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    JOHNSON AVE</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    JOHNSTON RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    JONES RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    JONES ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    JOPLING ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    JUBILEE AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    JUGIONG ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    JULIE ST</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    JULIUS AVE</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>    JUPP PL</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    KAGA PL</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    KALUNA ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    KAMILAROY RD</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    KANDY AVE</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    KARALEE CL</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    KAREN MORAS DR</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    KARINGAL AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    KARINGAL CT</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    KARNAK ST</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    KARONGA CL</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    KARRIL AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    KATHLEEN ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    KATHY CL</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>    KATOA PL</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    KAWANA CL</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    KAY ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    KEATS AVE</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    KEATS ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    KEDRON AVE</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    KEELER ST</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>    KEILEY ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    KEIRA PL</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    KELLAWAY ST</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    KELLS RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    KENDALL ST</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    KENDALL ST</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    KENNETH ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    KENNY PL</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    KENT RD</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    KENT RD</td><td>MARSFIELD 2122</td><td>RND_7250</td></tr>
+ <tr><td>    KENWICK LANE</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    KEPPEL RD</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    KERRIBEE PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    KERRY AVE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    KETHEL RD</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    KHARTOUM AVE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    KIMBARRA RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    KIMBERLEY RD</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    KING EDWARD ST</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    KINGS PL</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    KINGS RD</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    KINGSFORD AVE</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    KINSON CRES</td><td>DENISTONE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    KIPARRA ST</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    KIPARRA ST</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    KIRK PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    KIRKHAM ST</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    KIRKWOOD AVE</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    KIRRIFORD WAY</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    KNOWLMAN AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    KNOX AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    KOKODA ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    KOOLOONA CRES</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    KOORONG ST</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    KOOYONG ST</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    KORANGI RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    KULGOA AVE</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    KUPPA RD</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    KYWONG AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    LACHLAN AVE</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    LACHLAN AVE</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    LACHLAN GR</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    LAMBERT ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    LAMORNA AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    LANCASTER AVE</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    LANCASTER AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    LANCASTER DR</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    LANCELEY AVE</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    LANE COVE RD</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    LANGSTON PL</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    LANSDOWNE ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    LARDELLI DR</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    LARKARD ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    LARNOCK AVE</td><td>PYMBLE 2073</td><td>RND_3530</td></tr>
+ <tr><td>    LASBURN CRES</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    LATONA ST</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    LAUREL PL</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    LAVARACK ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    LAWLEY CRES</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    LAWRENCE ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    LEAL CT</td><td>PYMBLE 2073</td><td>RND_3530</td></tr>
+ <tr><td>    LEE AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    LEES LANE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    LEICESTER ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    LEISURE CL</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    LEMONGROVE AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    LENNOX ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    LEONARD PL</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    LESLEY AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    LESLIE ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    LEVY ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    LEWIS ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    LEXCEN PL</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    LEXINGTON AVE</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    LIBYA PL</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>    LILAC PL</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    LILLI PILLI ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    LILY ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    LIME GR</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    LINCOLN ST</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    LINDEN AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    LINDISFARNE CRES</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    LINDSAY CL</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    LINLEY CL</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    LINLEY WAY</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    LINTON AVE</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    LINTON LANE</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    LIONEL AVE</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    LIPSIA PL</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    LITTLE CHURCH ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    LLOYD WRIGHT WAY</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    LLOYDS AVE</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>    LOCH AWE CRES</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    LOCHINVAR PDE</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    LOCK ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    LOFBERG RD</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    LOMAX ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    LONG AVE</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    LONGVIEW ST</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    LONSDALE AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    LORNA AVE</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    LOVAT ST</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    LOVELL RD</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    LUCINDA RD</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    LUCKNOW RD</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>    LUDMILA CL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    LUMSDAINE AVE</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    LUND ST</td><td>DENISTONE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    LYLE ST</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    LYNBRAE AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    LYNCH CL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    LYNDELLE PL</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    LYNDEN AVE</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    LYNDON WAY</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    LYNE RD</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    LYNETTE AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    LYNN RIDGE AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    LYONPARK RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    MACINTOSH ST</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    MACLEAY ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    MACQUARIE PL</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    MACQUARIE RD</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    MADISON AVE</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MAGDALA RD</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    MAGNOLIA AVE</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    MAHER CL</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    MAHON ST</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>    MAIDA RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    MAISMONDE PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MALORY AVE</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    MALTON RD</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    MALVINA ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    MANGIRI RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    MANHATTAN CT</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MANILDRA AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    MARCELLA ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    MARGARET ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    MARILYN ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    MARLOW AVE</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    MARLOW LANE</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    MAROOK ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MAROOTA WAY</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    MARRON PL</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    MARS ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    MARSDEN RD</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    MARSDEN RD</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MARSHALL PL</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    MARSHALL RD</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    MARTIN ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    MARWOOD DR</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    MARY ST</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    MARY ST</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    MASON AVE</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    MASON ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    MATONG ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    MAVIS ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    MAWARRA CRES</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    MAWSON AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    MAY ST</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>    MAYCOCK ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    MAYFIELD AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    MAZE AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    MCCALLUM AVE</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    MCGOWAN ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    MCGREGOR ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    MCINTOSH ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    MCINTYRE ST</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>    MCKECHNIE ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    MCKILLOP PL</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    MCMULLEN AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    MCPHERSON ST</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    MCPHERSON ST</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>    MEADOW CL</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    MEADOW CRES</td><td>MEADOWBANK 2114</td><td>RND_7450</td></tr>
+ <tr><td>    MEADOWBANK LANE</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    MEADWAY CL</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    MEGAN ST</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    MEIKLE PL</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    MELALEUCA CRES</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MELBA DR</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    MELDRUM ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    MELKIN END</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    MELLOR ST</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>    MELROSE ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    MELVILLE ST</td><td>RYDE 2112</td><td>RND_7460</td></tr>
+ <tr><td>    MELVILLE ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    MENZIES RD</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    MEREDITH ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    MERINDA AVE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    MERLE ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    MERRIWA ST</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>    META ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    METCALF AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    METZLER PL</td><td>GORDON 2072</td><td>RND_3460</td></tr>
+ <tr><td>    MIAMBA AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    MICHAEL ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    MIDSON RD</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    MIDSON RD</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    MIDSON RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    MILHAM AVE</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    MILNE ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    MILROY ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    MILTON AVE</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    MILTON ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    MIMOS ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MINGA ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    MINNAMURRA AVE</td><td>PYMBLE 2073</td><td>RND_3480</td></tr>
+ <tr><td>    MINNAMURRA PL</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    MINNAMURRA PL</td><td>PYMBLE 2073</td><td>RND_3480</td></tr>
+ <tr><td>    MINNS RD</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    MIRIAM RD</td><td>DENISTONE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    MIRIAM RD</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    MIROOL ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MIROOL ST</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MITCHELL ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    MOBBS LANE</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    MOBBS LANE</td><td>EASTWOOD 2122</td><td>RND_6110</td></tr>
+ <tr><td>    MOBBS LANE</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MOCATTA AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    MOIRA AVE</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MOIRA AVE</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MONCRIEFF DR</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    MONDIAL PL</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    MONS AVE</td><td>WEST RYDE 2114</td><td>RND_7420</td></tr>
+ <tr><td>    MONTGOMERY RD</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    MOOLTAN AVE</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    MOORILLA AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    MOORINA RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    MORRIS ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MORSHEAD AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    MORSHEAD ST</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    MORTON AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    MORVAN ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MORVAN ST</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MOSELEY ST</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    MOSS ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    MOUNT IDA ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    MOUNT ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    MOUNT WILLIAM ST</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>    MOUNTAIN ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    MULVIHILL ST</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>    MULYAN AVE</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    MUNRO ST</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    MURIEL AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    MURRAY RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    MURRAY ST</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    MURUBA AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    MYOORA ST</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    MYRA AVE</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    NADENE PL</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    NALAURA CL</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    NALLADA PL</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    NAMOI ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    NANBAREE RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    NANCARROW AVE</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>    NANCARROW AVE</td><td>MEADOWBANK 2114</td><td>RND_7020</td></tr>
+ <tr><td>    NAPIER CRES</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    NARELLE AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    NARELLE ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    NARENA CL</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    NASH PL</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    NEIL ST</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    NEIL ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    NELSON ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    NERANG ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    NETWORK PL</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>    NEVILLE ST</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>    NEWTON ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    NIANGLA PL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    NIARA ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    NICOLL AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    NILE CL</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>    NIRIMBA AVE</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    NITHDALE ST</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    NOLA ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    NORFOLK PL</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    NORFOLK RD</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    NORFOLK WAY</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    NORMA AVE</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    NORMA CRES</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    NORTH RD</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    NORTH ROCKS RD</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    NORTHCOTT AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    NORTHCOTT ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    NORTON RD</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    NORWOOD AVE</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    NUMA RD</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    OAKES AVE</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    OAKES RD</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    OAKLANDS AVE</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    OBERON CRES</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    O'KEEFE CRES</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    OLD BEECROFT RD</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    OLINDA CRES</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    OLIVE ST</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    OLIVIERI PL</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    OLYMPIC CT</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    ONSLOW LANE</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    ORANA AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    ORANA ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    ORANGE ST</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    ORCHARD RD</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    ORCHARD ST</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ORCHARD ST</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>    ORCHARD ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    ORINOCO ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    ORMISTON AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    ORMONDE AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    OSBORNE AVE</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    OSLO ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    PACEY AVE</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    PAGE CT</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    PAISLEY PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    PAMELA ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    PAR CL</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    PARER ST</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    PARK AVE</td><td>DENISTONE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    PARK AVE</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    PARK AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    PARK CRES</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    PARK LANE</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>    PARK ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    PARKER AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    PARKER CL</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    PARKES ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    PARKLANDS RD</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    PARKLEA PL</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    PARKWOOD GR</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    PARMA PL</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    PARRY ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    PARRY ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    PATE AVE</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    PATERSON ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    PATRICIA ST</td><td>MARSFIELD 2122</td><td>RND_7680</td></tr>
+ <tr><td>    PATTERSON AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    PATYA CL</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    PAUL PL</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    PAUL ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    PAYTEN ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    PEACE AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    PEACH CT</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    PEACH TREE RD</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    PEARL AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    PEARL ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    PEARSON AVE</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>    PELLISIER PL</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    PELLISIER RD</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    PEMBROKE RD</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    PENNANT AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    PENNANT AVE</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    PENNANT HILLS RD</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    PENNANT PDE</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    PENNANT PDE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    PENRHYN AVE</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    PENRHYN AVE</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    PENTECOST AVE</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    PEPPERINA PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    PERKINS ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    PHILIP MALL</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    PHILIP PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    PHILLIP RD</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    PICKFORD AVE</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    PIDDING RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    PINDARI AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    PINDARI ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    PINE ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    PINETREE DR</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    PINNER CL</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    PITTWATER RD</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    PITTWATER RD</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    PLASSEY RD</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>    PLEASANT CT</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    PLUNKETT ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    PLYMPTON RD</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    PLYMPTON RD</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    POOLEY ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    POPE ST</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>    PORTER ST</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>    POST OFFICE ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    POST OFFICE ST</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    POTTS ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    PRATTEN AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    PRICE ST</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>    PRIMROSE AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    PRINCE OF WALES DR</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    PRINCES ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    PROGRESS AVE</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>    PROVIDENCE RD</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    PUTNEY PDE</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    QUADRANT CL</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    RAIDELL PL</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    RAILWAY AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    RAILWAY PDE</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>    RAILWAY RD</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    RAIMONDE RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    RAIMONDE RD</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    RAMSAY AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    RATCLIFFE ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    RAVENSWOOD AVE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    RAWSON CRES</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    RAYMOND PL</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    RAYMOND ST</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    READ ST</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>    READFORD PL</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    REDGROVE AVE</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    REDMILL CL</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    REDSHAW ST</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    REELY ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    REEVES AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    REGENT ST</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    REMBRANDT ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    RENE ST</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    RESEARCH PARK DR</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    RESERVE ST</td><td>DENISTONE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    RESERVE ST</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    RESERVOIR RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    REX ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    REYNOLDS ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    RHODES ST</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    RHODES ST</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>    RICHARD JOHNSON CRES</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    RICHARD PORTER WAY</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    RICHARDS AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    RICHARDSON PL</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>    RICHMOND ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    RICKARD ST</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>    RICKARD ST</td><td>RYDE 2112</td><td>RND_7090</td></tr>
+ <tr><td>    RICKARD ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    RIDDLES LANE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    RIDGE ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    RIVERSIDE AVE</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    RIVERSIDE DR</td><td>NORTH RYDE 2113</td><td>RND_7040</td></tr>
+ <tr><td>    RIVERSIDE DR</td><td>MACQUARIE PARK 2113</td><td>RND_7040</td></tr>
+ <tr><td>    RIVERVIEW ST</td><td>WEST RYDE 2114</td><td>RND_7410</td></tr>
+ <tr><td>    RIVETT RD</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>    ROBBIE CRES</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    ROBECQ AVE</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    ROBERT ST</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    ROBERT ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    ROBIN ST</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    ROBINSON ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    ROCCA ST</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    ROCKLEIGH WAY</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    RODNEY AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    RODNEY ST</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    ROGAL PL</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    ROKEVA ST</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    ROMA ST</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    ROMFORD RD</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    RONALD AVE</td><td>RYDE 2112</td><td>RND_7680</td></tr>
+ <tr><td>    RORKE ST</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    ROSE ST</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    ROSEBANK AVE</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>    ROSEDALE RD</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    ROSEDALE RD</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    ROSELEA WAY</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    ROSEN ST</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    ROSEWOOD AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    ROSS SMITH AVE</td><td>MEADOWBANK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    ROSS ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    ROTHERY ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    ROTHESAY AVE</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>    ROTHWELL ST</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    ROWELL ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    ROYSTON CL</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    RUDD ST</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    RUGBY RD</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    RUNNYMEDE WAY</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    RUSE ST</td><td>NORTH RYDE 2113</td><td>RND_7250</td></tr>
+ <tr><td>    RUSHALL ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    RUSSELL ST</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    RUTH ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    RUTLEDGE ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    RYDE RD</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    RYDE RD</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    RYDE ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    RYEDALE RD</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    RYRIE ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    SAGER PL</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    SALERWONG PL</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    SALTER CRES</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>    SAMUEL ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    SANDRA ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    SANDRINGHAM DR</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    SANTA ROSA AVE</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>    SARACEN RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    SAUNDERS CL</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    SCHUMACK ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    SCOTT ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    SEALE CL</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    SEARLE ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    SECOND AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    SECOND AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    SEE ST</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    SELWYN ST</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    SEMPLE ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    SEQUOIA CL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    SEVEN ST</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    SEWELL ST</td><td>RYDE 2112</td><td>RND_7460</td></tr>
+ <tr><td>    SHADDOCK AVE</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    SHAFTSBURY RD</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    SHAFTSBURY RD</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    SHAFTSBURY RD</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    SHAFTSBURY RD</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    SHAW ST</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    SHEEHAN ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    SHERBROOKE RD</td><td>WEST RYDE 2114</td><td>RND_7450</td></tr>
+ <tr><td>    SHERWOOD CT</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    SHERWOOD PL</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    SHIPWAY ST</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>    SHIRLEY ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    SHIRLEY ST</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>    SIMLA RD</td><td>DENISTONE 2114</td><td>RND_7470</td></tr>
+ <tr><td>    SIMPSON ST</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    SIMPSON ST</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    SINDEL ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    SIXTH AVE</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>    SLUMAN ST</td><td>DENISTONE WEST 2114</td><td>RND_7470</td></tr>
+ <tr><td>    SMALL ST</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    SMALLS RD</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>    SMALLS RD</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    SMITH ST</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>    SMITH ST</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>    SNOWDON AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    SOBRAON RD</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    SOVEREIGN AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    SPENCER ST</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    SPOONER PL</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    SPRING ST</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    SPRING ST</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    SQUIRE ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    ST ANDREWS DR</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    ST ANNES ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    STANLEY RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    STANLEY ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    STAPLETON PL</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    STAR ST</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    STATEN PL</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    STATION ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>    STATION ST</td><td>WEST RYDE 2114</td><td>RND_7450</td></tr>
+ <tr><td>    STEPHEN AVE</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    STEWART CL</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    STEWART ST</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    STONE ST</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    STOREY ST</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    STRATFORD AVE</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    STRATHWOOD CT</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    STROUD ST</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    STUART ST</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>    STURDEE ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    SUAKIN ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    SUMMERWOOD WAY</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    SUMMIT CL</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    SUN VALLEY PL</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    SUNDEN WAY</td><td>NORTH EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    SUNHAVEN ST</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>    SUNHILL PL</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    SURREY ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    SUSAN PL</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    SUSAN SCHARDT WAY</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    SUSSEX ST</td><td>EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    SUTHERLAND AVE</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    SUTHERLAND RD</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    SUTTOR AVE</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    SYBIL ST</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    SYLVIA AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    TALAVERA RD</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>    TALINGA ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    TALLWOOD AVE</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    TAMBOY AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    TANDERRA AVE</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    TARANTO RD</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>    TARRAGUNDI RD</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    TASMAN PL</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    TAUNTON ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    TAYLOR AVE</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    TAYLOR ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    TECHNOLOGY PL</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    TENNYSON RD</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    TERRY RD</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    TERRY RD</td><td>WEST RYDE 2114</td><td>RND_7100</td></tr>
+ <tr><td>    TERRY RD</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    THALLON ST</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    THE BOULEVARD</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    THE BOULEVARDE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    THE COMENARRA PKWY</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    THE CRESCENT</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>    THE CRESCENT</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>    THE GLEN</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    THE PROMENADE</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>    THELMA ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    THIRD AVE</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>    THIRD AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    THIRD AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    THISTLE ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    THOMAS HOLT DR</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>    THORN ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    THORNTON AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    THRELFALL ST</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    TIMBERTOP AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    TIMBERTOP WAY</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    TINTERN AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    TIPTREES AVE</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>    TOBRUK AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    TOBRUK ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    TODMAN AVE</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    TOMAH ST</td><td>CARLINGFORD 2118</td><td>RND_6230</td></tr>
+ <tr><td>    TONI CRES</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    TORQUIL AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    TORRINGTON DR</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    TOWRI PL</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    TRACEY AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    TRAFALGAR PL</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>    TRAMWAY ST</td><td>DENISTONE WEST 2114</td><td>RND_7440</td></tr>
+ <tr><td>    TRAMWAY ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    TREEVIEW PL</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    TREHARNE CL</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    TREVITT RD</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    TRIGG AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    TRIPOLI AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    TRISTANIA PL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    TRISTANIA WAY</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    TROON PL</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>    TRUSCOTT ST</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>    TUCKER ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    TUCKWELL PL</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>    TUDOR PL</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    TULIP ST</td><td>NORTH RYDE 2113</td><td>RND_7300</td></tr>
+ <tr><td>    TUNKS ST</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    TURNER AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    TURNER ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    TYAGARAH ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    UNDERDALE LANE</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>    UNION ST</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    UNION ST</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    UNIVERSITY AVE</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>    VALDA PL</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    VALE ST</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    VALEWOOD CRES</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    VALLEY RD</td><td>EPPING 2121</td><td>RND_7640</td></tr>
+ <tr><td>    VALLEY RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    VALLEY VIEW CRES</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    VANIMO PL</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    VERA ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    VICKERY AVE</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>    VICTORIA AVE</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    VICTORIA LANE</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    VICTORIA RD</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    VICTORIA ST</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    VIMIERA RD</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    VINCENTIA ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    VISTA ST</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    VIVYAN CL</td><td>DENISTONE 2114</td><td>RND_7460</td></tr>
+ <tr><td>    WADE LANE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    WADE ST</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>    WALKER PL</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    WALKER ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>    WALKLEY PHWY</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>    WALLACE ST</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>    WALLALONG CRES</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    WALLUMAI PL</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>    WALSH ST</td><td>EASTWOOD 2122</td><td>RND_7090</td></tr>
+ <tr><td>    WALTON CL</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    WANDEEN AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>    WANDOO AVE</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    WARANDOO ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    WARATAH ST</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    WARATAH ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    WARD ST</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    WARD ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>    WARD ST</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    WARING ST</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    WARRABRI PL</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    WARRAWONG ST</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>    WARREN ST</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>    WARRINGTON AVE</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    WARROWA AVE</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    WARWICK ST</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    WATERLOO RD</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    WATERVIEW ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    WATFORD CL</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    WATSON ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>    WATT AVE</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>    WATTLE PL</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    WATTLE ST</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>    WATTON RD</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    WATTS RD</td><td>RYDE 2112</td><td>RND_7670</td></tr>
+ <tr><td>    WAUGOOLA ST</td><td>GORDON 2072</td><td>RND_3530</td></tr>
+ <tr><td>    WAVELL AVE</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    WAY CL</td><td>CARLINGFORD 2118</td><td>RND_6210</td></tr>
+ <tr><td>    WAYELLA ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    WEAVER ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>    WELBY ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>    WELHAM ST</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>    WELLESLEY RD</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    WERONA AVE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>    WEST PDE</td><td>DENISTONE 2114</td><td>RND_7490</td></tr>
+ <tr><td>    WEST PDE</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>    WEST ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>    WESTMINSTER AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    WHARF RD</td><td>MELROSE PARK 2114</td><td>RND_7420</td></tr>
+ <tr><td>    WHITESIDE ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    WICKS RD</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>    WICKS RD</td><td>MACQUARIE PARK 2113</td><td>RND_7290</td></tr>
+ <tr><td>    WILCANNIA WAY</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>    WILDING ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    WILGA PL</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    WILLANDRA ST</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>    WILLIAM ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>    WILLIAM ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    WILLOUGHBY ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>    WILLOW CL</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    WILLOW CRES</td><td>RYDE 2112</td><td>RND_7090</td></tr>
+ <tr><td>    WILSHIRE AVE</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    WILSON ST</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>    WILTON CL</td><td>GORDON 2072</td><td>RND_3460</td></tr>
+ <tr><td>    WINBOURNE ST</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    WINBOURNE ST E</td><td>WEST RYDE 2114</td><td>RND_7440</td></tr>
+ <tr><td>    WINDERMERE RD</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>    WINDSOR AVE</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    WINGATE AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>    WINGROVE AVE</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    WINIFRED AVE</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>    WINSTON ST</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>    WISHART ST</td><td>EASTWOOD 2122</td><td>RND_7650</td></tr>
+ <tr><td>    WOLFE RD</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>    WOLGER RD</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>    WONDABAH PL</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>    WOOD ST</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    WOODBINE CRES</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>    WOODLANDS AVE</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    WOODRIDGE AVE</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    WOODS ST</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>    WOODSTOCK RD</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>    WOODVALE AVE</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>    WOORANG ST</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>    WYBURN AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    WYCOMBE ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>    WYOMEE AVE</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    WYRALLA AVE</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>    WYUNA RD</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    WYVERN ST</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>    YALDING AVE</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>    YALE ST</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>    YALLEROI AVE</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    YAMBA CL</td><td>MARSFIELD 2122</td><td>RND_7660</td></tr>
+ <tr><td>    YANGALLA ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    YANKO RD</td><td>WEST PYMBLE 2073</td><td>RND_3430</td></tr>
+ <tr><td>    YARAAN AVE</td><td>EPPING 2121</td><td>RND_6110</td></tr>
+ <tr><td>    YARABAH AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>    YARRALUMLA DR</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>    YARRAN ST</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    YARRARA RD</td><td>WEST PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>    YARRAWONGA CL</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>    YARRENNAN AVE</td><td>WEST PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>    YARWOOD ST</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>    YERONG ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>    YORK ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>    YORK ST</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>    YOUNG PDE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>    YOUNG RD</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>    ZANCO RD</td><td>MARSFIELD 2122</td><td>RND_7700</td></tr>
+ <tr><td>    ZOLA AVE</td><td>RYDE 2112</td><td>RND_7300</td></tr>
+ <tr><td>   110 - 110  HERRING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7690</td></tr>
+ <tr><td>   384 - 394  LANE COVE RD</td><td>MACQUARIE PARK 2113</td><td>RND_7250</td></tr>
+ <tr><td>   396 - 440  LANE COVE RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>   486 - 600  VICTORIA RD</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>   680 - 800  VICTORIA RD</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>  10 - 12  JAMES ST</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>  102 - 126  CRESSY RD</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>  102 - 150  CRIMEA RD</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>  106 - 106  CHARLES ST</td><td>RYDE 2112</td><td>RND_7040</td></tr>
+ <tr><td>  12 - 14  ALMA ST</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>  12 - 14  EPPING RD</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>  14 - 14  ANTHONY RD</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>  152 - 204  CRESSY RD</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>  16 - 60  EPPING RD</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>  168 - 208  EPPING RD</td><td>MARSFIELD 2122</td><td>RND_7690</td></tr>
+ <tr><td>  2 - 2  ETHEL ST</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>  2 - 24  HILLVIEW RD</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>  2 - 28  WEST PDE</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>  2 - 34  RYEDALE RD</td><td>WEST RYDE 2114</td><td>RND_7100</td></tr>
+ <tr><td>  2 - 4  PARK AVE</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>  2 - 44  BRUSH RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>  2 - 6  LIVINGSTONE AVE</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>  22 - 44  EAST PDE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>  294 - 304  PENNANT HILLS RD</td><td>CARLINGFORD 2118</td><td>RND_6300</td></tr>
+ <tr><td>  36 - 92  SUTHERLAND RD</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>  38 - 38  MAXIM ST</td><td>WEST RYDE 2114</td><td>RND_7450</td></tr>
+ <tr><td>  4 - 10  EAST PDE</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>  4 - 6  DEVLIN ST</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>  4 - 62  MOREE ST</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>  42 - 42  ANZAC AVE</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>  52 - 54  ABUKLEA RD</td><td>EASTWOOD 2122</td><td>RND_7710</td></tr>
+ <tr><td>  52 - 76  PEMBROKE ST</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>  56 - 190  ABUKLEA RD</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>  570 - 576  BLAXLAND RD</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>  6 - 66  DUMARESQ ST</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>  60 - 62  PARKLAND RD</td><td>CARLINGFORD 2118</td><td>RND_7240</td></tr>
+ <tr><td>  62 - 166  EPPING RD</td><td>NORTH RYDE 2113</td><td>RND_7240</td></tr>
+ <tr><td>  64 - 64  NORFOLK RD</td><td>EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>  642 - 642  VICTORIA RD</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>  66 - 72  CONSTITUTION RD W</td><td>MEADOWBANK 2114</td><td>RND_7450</td></tr>
+ <tr><td>  78 - 78  BADAJOZ RD</td><td>RYDE 2112</td><td>RND_7270</td></tr>
+ <tr><td>  8 - 28  CONSTITUTION RD</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>  8 - 8  FITZSIMONS LANE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>  8 - 8  HILLVIEW LANE</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>  8 - 8  JUNCTION ST</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>  82 - 114  CONSTITUTION RD W</td><td>MEADOWBANK 2114</td><td>RND_7420</td></tr>
+ <tr><td>  854 - 924  PACIFIC HWY</td><td>GORDON 2072</td><td>RND_3450</td></tr>
+ <tr><td>  86 - 86  BLENHEIM RD</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>  874 - 874  VICTORIA RD</td><td>RYDE 2112</td><td>RND_7480</td></tr>
+ <tr><td>1 - 1    EPPING RD</td><td>NORTH RYDE 2113</td><td>RND_7210</td></tr>
+ <tr><td>1 - 1    LAKESIDE RD</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>1 - 1    LIVINGSTONE AVE</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>1 - 1  2 - 2  JAMES ST</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>1 - 1  2 - 20  AVON RD</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>1 - 1  4 - 18  CECIL ST</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>1 - 105  2 - 102  MURRAY FARM RD</td><td>CARLINGFORD 2118</td><td>RND_6250</td></tr>
+ <tr><td>1 - 11  2 - 10  WENTWORTH RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>1 - 11  2 - 42  BELMORE ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>1 - 11  46 - 60  BRUSH RD</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>1 - 129  80 - 128  COPELAND RD</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>1 - 13  2 - 8  JUNCTION ST</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>1 - 133  2 - 142  QUARRY RD</td><td>RYDE 2112</td><td>RND_7070</td></tr>
+ <tr><td>1 - 139  36 - 144  JENKINS RD</td><td>CARLINGFORD 2118</td><td>RND_6260</td></tr>
+ <tr><td>1 - 15  2 - 10  CUMBERLAND ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>1 - 15  2 - 30  KULGOA RD</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>1 - 17  2 - 10  HULL RD</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>1 - 19  10 - 14  WONGALA CRES</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>1 - 21  2 - 18  HERBERT ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>1 - 21  2 - 28  PEMBROKE ST</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>1 - 21  28 - 54  HILLVIEW RD</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>1 - 23  6 - 26  PARK AVE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>1 - 269  2 - 210  ROWE ST</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>1 - 27  2 - 40  SKENES AVE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>1 - 27  2 - 54  PRINCES ST</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>1 - 33  8 - 34  WATERLOO RD</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>1 - 35  2 - 40  PARKES ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>1 - 37  2 - 42  CARLOTTA AVE</td><td>GORDON 2072</td><td>RND_3460</td></tr>
+ <tr><td>1 - 37  2 - 56  TARRANTS AVE</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>1 - 37  4 - 38  CARLINGFORD RD</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>1 - 39    DEVLIN ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>1 - 39  2 - 44  RAWSON ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>1 - 41  2 - 18  TWIN RD</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>1 - 41  2 - 74  HERMITAGE RD</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>1 - 43  2 - 42  MERRIVALE RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>1 - 43  4 - 32  ESSEX ST</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>1 - 45  2 - 30  GAZA RD</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>1 - 45  2 - 8  GRANDVIEW ST</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>1 - 47  2 - 38  CLANWILLIAM ST</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>1 - 47  2 - 58  MAXIM ST</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>1 - 49  2 - 58  PARKLAND RD</td><td>CARLINGFORD 2118</td><td>RND_6280</td></tr>
+ <tr><td>1 - 49  2 - 64  BADAJOZ RD</td><td>RYDE 2112</td><td>RND_7290</td></tr>
+ <tr><td>1 - 5     TALAVERA RD</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>1 - 5    BLAXLAND RD</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>1 - 5  8 - 8  PYMBLE AVE</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>1 - 51    CONSTITUTION RD</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>1 - 53  2 - 78  BANNOCKBURN RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>1 - 55  2 - 44  DARVALL RD</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>1 - 55  2 - 62  NORFOLK RD</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>1 - 57  2 - 62  SHEPHERD ST</td><td>RYDE 2112</td><td>RND_7460</td></tr>
+ <tr><td>1 - 59  10 - 10  FORSYTH ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>1 - 59  2 - 62  MALTON RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>1 - 59  2 - 66  BLENHEIM RD</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>1 - 69  2 - 80  FALCONER ST</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>1 - 7    CHATHAM RD</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>1 - 7  8 - 16  CHAPMAN AVE</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>1 - 71  2 - 42  KENT ST</td><td>EPPING 2121</td><td>RND_6050</td></tr>
+ <tr><td>1 - 71  2 - 70  CHARLES ST</td><td>RYDE 2112</td><td>RND_7050</td></tr>
+ <tr><td>1 - 71  2 - 70  OXFORD ST</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>1 - 733  2 - 20  ST JOHNS AVE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>1 - 75    LOVELL RD</td><td>DENISTONE EAST 2112</td><td>RND_7090</td></tr>
+ <tr><td>1 - 77  36 - 72  WEST PDE</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>1 - 8    KHARTOUM RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>1 - 81  2 - 98  DUNLOP ST</td><td>EPPING 2121</td><td>RND_6080</td></tr>
+ <tr><td>1 - 9    TELEGRAPH RD</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+ <tr><td>1 - 93  4 - 78  RAY RD</td><td>EPPING 2121</td><td>RND_6010</td></tr>
+ <tr><td>1025 - 1233  1072 - 1188  VICTORIA RD</td><td>WEST RYDE 2114</td><td>RND_7420</td></tr>
+ <tr><td>107 - 225  94 - 164  CULLODEN RD</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>11 - 11    CULLODEN RD</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>11 - 133  2 - 148  BLAXLAND RD</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>11 - 27     KHARTOUM RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>11 - 91  2 - 88  TELEGRAPH RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>115 - 121  86 - 142  RYDE RD</td><td>PYMBLE 2073</td><td>RND_3520</td></tr>
+ <tr><td>115 - 149  90 - 148  BEECROFT RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>117 - 121    NORTH RD</td><td>RYDE 2112</td><td>RND_7670</td></tr>
+ <tr><td>117 - 189  34 - 46  RYEDALE RD</td><td>DENISTONE 2114</td><td>RND_7100</td></tr>
+ <tr><td>119 - 153  98 - 128  KENT ST</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>123 - 197  112 - 204  NORTH RD</td><td>EASTWOOD 2122</td><td>RND_7670</td></tr>
+ <tr><td>129 - 205  120 - 184  VIMIERA RD</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>13 - 35  50 - 72  BELMORE ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>13 - 69  2 - 20  RUTLEDGE ST</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>131 - 245  218 - 288  PENNANT HILLS RD</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>137 - 175  116 - 142  HERRING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7200</td></tr>
+ <tr><td>137 - 215  136 - 214  COPELAND RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>137 - 505  20 - 134  TWIN RD</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>141 - 291  146 - 290  QUARRY RD</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>149 - 159     EPPING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7700</td></tr>
+ <tr><td>15 - 39  12 - 22  WENTWORTH RD</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>15 - 47  8 - 30  CHATHAM RD</td><td>WEST RYDE 2114</td><td>RND_7470</td></tr>
+ <tr><td>163 - 163    PRINCES ST</td><td>RYDE 2112</td><td>RND_7040</td></tr>
+ <tr><td>17 - 25  12 - 20  CUMBERLAND ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>17 - 59  12 - 50  HULL RD</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>17 - 59  6 - 62  FELTON RD</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>183 - 797  698 - 756  PENNANT HILLS RD</td><td>CARLINGFORD 2118</td><td>RND_6270</td></tr>
+ <tr><td>189 - 189     EPPING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7720</td></tr>
+ <tr><td>19 - 19    CARLOTTA AVE</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>19 - 37    RYDE RD</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>195 - 197    MURRAY FARM RD</td><td>CARLINGFORD 2118</td><td>RND_1360</td></tr>
+ <tr><td>197 - 197     HERRING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>199 - 205    WATERLOO RD</td><td>MARSFIELD 2122</td><td>RND_7720</td></tr>
+ <tr><td>199 - 213    EPPING RD</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>199 - 247  206 - 294  NORTH RD</td><td>EASTWOOD 2122</td><td>RND_7660</td></tr>
+ <tr><td>201 - 295  200 - 304  MALTON RD</td><td>NORTH EPPING 2121</td><td>RND_6090</td></tr>
+ <tr><td>207 - 215  158 - 190  WATERLOO RD</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>21 - 181  22 - 134  ST JOHNS AVE</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>21 - 71  2 - 60  BEECROFT RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>21 - 75     EPPING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7210</td></tr>
+ <tr><td>21 - 81    WONGALA CRES</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>213 - 259  190 - 192  VIMIERA RD</td><td>MARSFIELD 2122</td><td>RND_7740</td></tr>
+ <tr><td>219 - 357  158 - 324  BLAXLAND RD</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>227 - 365  332 - 346  MORRISON RD</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>23 - 25  30 - 50  PEMBROKE ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>23 - 33  20 - 36  HERBERT ST</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>241 - 247  48 - 72  RYEDALE RD</td><td>DENISTONE 2114</td><td>RND_7610</td></tr>
+ <tr><td>247 - 845  312 - 790  PENNANT HILLS RD</td><td>CARLINGFORD 2118</td><td>RND_6240</td></tr>
+ <tr><td>255 - 265    MORRISON RD</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>27 - 123     EPPING RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>27 - 31  2 - 14  SOMERSET ST</td><td>EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>275 - 315  448 - 448  LANE COVE RD</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>281 - 333  276 - 332  ROWE ST</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>29 - 77     COXS RD</td><td>NORTH RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>293 - 295    QUARRY RD</td><td>RYDE 2112</td><td>RND_7670</td></tr>
+ <tr><td>297 - 341  306 - 346  MALTON RD</td><td>NORTH EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>3 - 117  2 - 142  MONA VALE RD</td><td>PYMBLE 2073</td><td>RND_3460</td></tr>
+ <tr><td>3 - 167  16 - 132  LIVINGSTONE AVE</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>3 - 25  14 - 36  ANTHONY RD</td><td>WEST RYDE 2114</td><td>RND_7490</td></tr>
+ <tr><td>3 - 27  2 - 20  CHELTENHAM RD</td><td>CHELTENHAM 2119</td><td>RND_1330</td></tr>
+ <tr><td>3 - 3    FITZSIMONS LANE</td><td>GORDON 2072</td><td>RND_3450</td></tr>
+ <tr><td>3 - 3    TRELAWNEY ST</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>3 - 31  6 - 38  ETHEL ST</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>3 - 55  22 - 70  CECIL ST</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>3 - 65  6 - 90  RIDGE ST</td><td>GORDON 2072</td><td>RND_3480</td></tr>
+ <tr><td>3 - 67  64 - 66  AVON RD</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>3 - 9     RUTLEDGE ST</td><td>EASTWOOD 2122</td><td>RND_7730</td></tr>
+ <tr><td>3 - 93  2 - 92  CULLODEN RD</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>31 - 99  32 - 110  LANE COVE RD</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>33 - 37  32 - 46  KHARTOUM RD</td><td>MACQUARIE PARK 2113</td><td>RND_7220</td></tr>
+ <tr><td>33 - 89  22 - 78  CHELTENHAM RD</td><td>CHELTENHAM 2119</td><td>RND_1350</td></tr>
+ <tr><td>35 - 109  36 - 86  WATERLOO RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>37 - 91  40 - 76  KULGOA RD</td><td>PYMBLE 2073</td><td>RND_3530</td></tr>
+ <tr><td>37 - 91  80 - 110  PRINCES ST</td><td>RYDE 2112</td><td>RND_7130</td></tr>
+ <tr><td>39 - 107    RYDE RD</td><td>PYMBLE 2073</td><td>RND_3470</td></tr>
+ <tr><td>39 - 39    SKENES AVE</td><td>EASTWOOD 2122</td><td>RND_7640</td></tr>
+ <tr><td>39 - 41  42 - 46  PARKES ST</td><td>RYDE 2112</td><td>RND_7460</td></tr>
+ <tr><td>41 - 41  74 - 100  BELMORE ST</td><td>RYDE 2112</td><td>RND_7120</td></tr>
+ <tr><td>41 - 61  48 - 76  RAWSON ST</td><td>EPPING 2121</td><td>RND_6040</td></tr>
+ <tr><td>41 - 77  56 - 98  TARRANTS AVE</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>43 - 167  40 - 176  CARLINGFORD RD</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>43 - 55  46 - 56  MURRAY FARM RD</td><td>BEECROFT 2119</td><td>RND_1350</td></tr>
+ <tr><td>45 - 89  46 - 88  MERRIVALE RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>47 - 107    GRANDVIEW ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>47 - 119  36 - 120  ESSEX ST</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>47 - 47    LOVELL RD</td><td>DENISTONE EAST 2112</td><td>RND_7100</td></tr>
+ <tr><td>47 - 93    CRESSY RD</td><td>EAST RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>47 - 99  52 - 96  ANZAC AVE</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>49 - 63  40 - 68  CLANWILLIAM ST</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>497 - 623     VICTORIA RD</td><td>RYDE 2112</td><td>RND_7060</td></tr>
+ <tr><td>5 - 115  8 - 62  NORTH RD</td><td>RYDE 2112</td><td>RND_7090</td></tr>
+ <tr><td>5 - 29  6 - 10  ALMA ST</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>5 - 39  2 - 42  CHURCH ST</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>5 - 73  2 - 62  BOWDEN ST</td><td>RYDE 2112</td><td>RND_7460</td></tr>
+ <tr><td>51 - 51    BADAJOZ RD</td><td>NORTH RYDE 2113</td><td>RND_7290</td></tr>
+ <tr><td>51 - 51  32 - 32  GAZA RD</td><td>WEST RYDE 2114</td><td>RND_7450</td></tr>
+ <tr><td>51 - 51  76 - 96  HERMITAGE RD</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>53 - 111  70 - 108  BADAJOZ RD</td><td>NORTH RYDE 2113</td><td>RND_7270</td></tr>
+ <tr><td>53 - 53    CONSTITUTION RD</td><td>MEADOWBANK 2114</td><td>RND_7020</td></tr>
+ <tr><td>55 - 253    HILLVIEW LANE</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>57 - 193  58 - 192  MURRAY FARM RD</td><td>BEECROFT 2119</td><td>RND_1360</td></tr>
+ <tr><td>57 - 57  46 - 66  DARVALL RD</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>57 - 57  58 - 64  CONSTITUTION RD</td><td>MEADOWBANK 2114</td><td>RND_7480</td></tr>
+ <tr><td>57 - 75  80 - 116  BANNOCKBURN RD</td><td>PYMBLE 2073</td><td>RND_3490</td></tr>
+ <tr><td>573 - 583  514 - 558  BLAXLAND RD</td><td>EASTWOOD 2122</td><td>RND_7100</td></tr>
+ <tr><td>585 - 679  582 - 620  BLAXLAND RD</td><td>EASTWOOD 2122</td><td>RND_7630</td></tr>
+ <tr><td>59 - 63  64 - 78  SHEPHERD ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>61 - 115  64 - 98  MALTON RD</td><td>BEECROFT 2119</td><td>RND_1330</td></tr>
+ <tr><td>61 - 77  2 - 6  FORSYTH ST</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>61 - 93  54 - 68  HULL RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>63 - 157  54 - 118  CHURCH ST</td><td>RYDE 2112</td><td>RND_7030</td></tr>
+ <tr><td>681 - 815  718 - 802  PACIFIC HWY</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>69 - 69  20 - 76  SOMERSET ST</td><td>EPPING 2121</td><td>RND_6030</td></tr>
+ <tr><td>691 - 781     VICTORIA RD</td><td>RYDE 2112</td><td>RND_7110</td></tr>
+ <tr><td>7 - 39  8 - 72  TRELAWNEY ST</td><td>EASTWOOD 2122</td><td>RND_7610</td></tr>
+ <tr><td>7 - 63  2 - 28  EPPING RD</td><td>EPPING 2121</td><td>RND_6020</td></tr>
+ <tr><td>7 - 7    JENKINS RD</td><td>CARLINGFORD 2118</td><td>RND_6290</td></tr>
+ <tr><td>7 - 7    NORTH RD</td><td>RYDE 2112</td><td>RND_7080</td></tr>
+ <tr><td>7 - 73    MOREE ST</td><td>GORDON 2072</td><td>RND_3540</td></tr>
+ <tr><td>7 - 81  4 - 112  TALAVERA RD</td><td>MACQUARIE PARK 2113</td><td>RND_7230</td></tr>
+ <tr><td>7 - 83  10 - 90  PYMBLE AVE</td><td>PYMBLE 2073</td><td>RND_3500</td></tr>
+ <tr><td>7 - 99  2 - 2  RYEDALE RD</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>71 - 115  42 - 80  KENT ST</td><td>EPPING 2121</td><td>RND_6120</td></tr>
+ <tr><td>71 - 71    CONSTITUTION RD W</td><td>WEST RYDE 2114</td><td>RND_7450</td></tr>
+ <tr><td>71 - 77    RIDGE ST</td><td>GORDON 2072</td><td>RND_3450</td></tr>
+ <tr><td>71 - 79  86 - 88  FALCONER ST</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>73 - 81    CRIMEA RD</td><td>MARSFIELD 2122</td><td>RND_7710</td></tr>
+ <tr><td>73 - 83  144 - 174  MORRISON RD</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>73 - 83  76 - 90  CHARLES ST</td><td>PUTNEY 2112</td><td>RND_7050</td></tr>
+ <tr><td>73 - 93  72 - 90  OXFORD ST</td><td>EPPING 2121</td><td>RND_6060</td></tr>
+ <tr><td>75 - 129  86 - 144  FELTON RD</td><td>CARLINGFORD 2118</td><td>RND_6220</td></tr>
+ <tr><td>77 - 109  64 - 98  BOWDEN ST</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>77 - 77  24 - 100  RUTLEDGE ST</td><td>EASTWOOD 2122</td><td>RND_7440</td></tr>
+ <tr><td>785 - 835  810 - 862  VICTORIA RD</td><td>RYDE 2112</td><td>RND_7020</td></tr>
+ <tr><td>79 - 237  78 - 156  COXS RD</td><td>NORTH RYDE 2113</td><td>RND_7260</td></tr>
+ <tr><td>799 - 817  810 - 850  PACIFIC HWY</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>83 - 111  64 - 88  BEECROFT RD</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>83 - 93    DUNLOP ST</td><td>EPPING 2121</td><td>RND_6100</td></tr>
+ <tr><td>843 - 1095  880 - 1068  VICTORIA RD</td><td>WEST RYDE 2114</td><td>RND_7480</td></tr>
+ <tr><td>85 - 173  176 - 330  MORRISON RD</td><td>PUTNEY 2112</td><td>RND_7030</td></tr>
+ <tr><td>85 - 173  98 - 190  CHARLES ST</td><td>PUTNEY 2112</td><td>RND_7040</td></tr>
+ <tr><td>855 - 985  950 - 1116  PACIFIC HWY</td><td>PYMBLE 2073</td><td>RND_3450</td></tr>
+ <tr><td>89 - 145    CONSTITUTION RD W</td><td>WEST RYDE 2114</td><td>RND_7420</td></tr>
+ <tr><td>9 - 23  2 - 30  LANE COVE RD</td><td>RYDE 2112</td><td>RND_7010</td></tr>
+ <tr><td>9 - 67    DUMARESQ ST</td><td>GORDON 2072</td><td>RND_3510</td></tr>
+ <tr><td>9 - 67  10 - 50  LAKESIDE RD</td><td>EASTWOOD 2122</td><td>RND_7620</td></tr>
+ <tr><td>9 - 83  20 - 112  CHAPMAN AVE</td><td>BEECROFT 2119</td><td>RND_1370</td></tr>
+ <tr><td>907 - 919     VICTORIA RD</td><td>WEST RYDE 2114</td><td>RND_7460</td></tr>
+ <tr><td>927 - 947     VICTORIA RD</td><td>WEST RYDE 2114</td><td>RND_7430</td></tr>
+ <tr><td>95 - 121  128 - 150  CRESSY RD</td><td>EAST RYDE 2113</td><td>RND_7280</td></tr>
+ <tr><td>95 - 235  80 - 226  RAY RD</td><td>EPPING 2121</td><td>RND_6070</td></tr>
+ <tr><td>97 - 97  94 - 142  SUTHERLAND RD</td><td>BEECROFT 2119</td><td>RND_1340</td></tr>
+ <tr><td>987 - 1161  1134 - 1256  PACIFIC HWY</td><td>PYMBLE 2073</td><td>RND_3440</td></tr>
+</tbody></table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
